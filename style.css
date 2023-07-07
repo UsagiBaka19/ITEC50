@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        #18453b,
+        #204518,
+        #184519,
+        #18453b
+        )
+}
+body{
+    background-image: var(--gradient);
+    background-size: 400% ;
+    animation: bg-animation 10s infinite alternate;
+}
+@keyframes bg-animation{
+    0% {background-position: left}
+    100% {background-position:right}
+}
+h1{
+    padding: 20px;
+    color: #aed3ba;
+    font-family: Caprasimo;
+}
+p{
+    padding: 20px;
+    color: #aed3ba;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #aed3ba;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.nav-container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.center-navbar{
+    display: flex;
+    justify-content: center;
+}
+.j-nav{
+    background-color: #18453b;
+    border-radius: 50px;
+    padding: 20px;
+}
+nav ul li {
+    text-decoration: none;
+    font-family: "Varela", sans-serif;
+    list-style: none;
+    display: inline;
+    padding: 13px 8px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #aed3ba;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+.active::after {
+    content: '';
+    background: #18453b;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #99d8cb0d;
+    transition: ease-in-out;
+}
+.dark{
+    margin-top: 20px;
+    height: 80px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: #102823af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); 
+    transition: background-color 0.5s ease-in-out;
+
+}
+@media (max-width: 1200px) {
+    .dark {
+      width: 50%;
+    }
+  }
+@media (max-width: 768px) {
+    .dark {
+      width: 80%;
+    }
+    nav ul li{
+        padding: 13px 5px;
+        margin: 9px;
+        font-size: 16px;
+    }
+  }
+  
+@media (max-width: 580px) {
+    .dark {
+      width: 80%;
+    }
+    nav ul li{
+        padding: 13px 5px;
+        margin: 9px;
+        font-size: 15px;
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
